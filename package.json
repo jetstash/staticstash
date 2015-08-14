@@ -1,0 +1,36 @@
+{
+  "name": "staticstash",
+  "version": "0.0.1",
+  "description": "A jQuery wrapper for integrating Jetstash into static pages.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jetstash/staticstash.git"
+  },
+  "keywords": [
+    "jetstash",
+    "jquery",
+    "forms",
+    "lead",
+    "capture",
+    "leads"
+  ],
+  "author": "Jetstash LLC",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/jetstash/staticstash/issues"
+  },
+  "homepage": "https://github.com/jetstash/staticstash",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jslint": "^0.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.2.4"
+  }
+}
