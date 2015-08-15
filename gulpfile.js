@@ -29,7 +29,8 @@ gulp.task('uglify', function() {
       version: version,
       build: build
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('demo/js'));
 });
 
 gulp.task('dist', function() {

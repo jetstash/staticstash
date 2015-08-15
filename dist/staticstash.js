@@ -1,7 +1,7 @@
 /**
 Version: 0.0.1
 
-Build: Fri, 14 Aug 2015 22:47:45 GMT
+Build: Fri, 14 Aug 2015 23:57:53 GMT
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -31,14 +31,34 @@ Copyright (c) 2015 Jetstash LLC
    */
   function StaticStash(el, options) {
     var defaultOptions = {
-      form: null,
-      thanks: "Thanks",
-      submit: "Submit"
+      form   : null,
+      thanks : "Thanks",
+      submit : "Submit"
     };
 
-    this.el      = el;
-    this.options = $.extend(defaultOptions, options);
+    this.el       = el;
+    this.options  = $.extend(defaultOptions, options);
+    this.messages = {
+      general : "Something went wrong, check your implementation.",
+      error   : "Error, error not found.",
+      form    : "A valid form id was not provided, this is required."
+    };
   }
+
+  /**
+   * Error it
+   *
+   * @param message string
+   *
+   * @return void
+   */
+  StaticStash.prototype.printError = function(message) {
+    if(this.messages.hasOwnProperty(message)) {
+      console.log(this.messages[message]);
+    } else {
+      console.log(this.message.error);
+    }
+  };
 
   /**
    * Run it
@@ -46,7 +66,12 @@ Copyright (c) 2015 Jetstash LLC
    * @return void
    */
   StaticStash.prototype.run = function() {
-    console.log("Loading... not really just didn't want the linter to fail. Huehuehue.");
+    if(this.form === null) {
+      console.log(this.messages.form);
+      return;
+    }
+
+    
   };
 
   /**
